@@ -26,7 +26,10 @@ jobs:
           npm install
           npm run build --if-present
           npm run test --if-present
-
+      - name: Compress
+        uses: TonyBogdanov/zip@1.0
+        with:
+            args: zip -qq -r ./archive.zip ./target
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
@@ -48,7 +51,10 @@ jobs:
       - name: add process.json
         run: |
           echo '{ script: "serve", env: { PM2_SERVE_SPA: "true", PM2_SERVE_HOMEPAGE: "/index.html" } }' >> build/process.json
-
+      - name: Decompress
+        uses: TonyBogdanov/zip@1.0
+        with:
+            args: unzip -qq ./archive.zip -d ./target
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
