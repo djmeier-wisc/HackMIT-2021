@@ -47,7 +47,8 @@ jobs:
           name: node-app
       - name: add process.json
         run: |
-          echo '{ script: "serve", env: { PM2_SERVE_SPA: "true", PM2_SERVE_HOMEPAGE: "/index.html" } }' >> build/process.json
+          npm install -g serve
+          serve -s build -l 80
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
