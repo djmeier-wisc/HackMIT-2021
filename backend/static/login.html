@@ -1,0 +1,14 @@
+<!-- Login form that sends a POST request to /login with username and password fields. -->
+<!DOCTYPE html>
+<html>
+<body>
+<%- message %>
+<form action="/login" method="POST">
+    <label>Username</label>
+    <input type="text" name="username"/>
+    <label>Password</label>
+    <input type="password" name="password" />
+    <input type="submit" value="Login" />
+</form>
+</body>
+</html>
