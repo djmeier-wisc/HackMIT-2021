@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import About from './components/about/About'
 import Finance from './components/financing/Financing'
 import Scholarships from './components/scholarships/Scholarships'
+import Home from './components/home/Home'
 function App() {
 
   const [state, setstate] = useState(0);
@@ -21,11 +22,4 @@ function App() {
   );
 }
 
-function Home(){
-  return (
-    <div>
-      home
-    </div>
-  )
-}
 export default App;
