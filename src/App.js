@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+
         <Nav  setState = {setstate}/>
         {state==0 && <Home/>}
       </header>
