@@ -82,9 +82,36 @@ function restrict(req, res, next) {
 }
 
 /* Financing data api */
+app.post('/finance_data', async (req, res) => {
+  // Generate the finance data from given data, sent through python script.
+  let args = ``; //TODO: write this when the script exists 
+  await exec(`/usr/bin/env python3 script.py ${args}`, (err, stdout, stderr) => {
+    if (err) {
+      res.status(500)
+      res.json({
+        error: "Unable to compute finance data. Try again later.",
+      });
+    } else {
+      res.status(200);
+      let options = {
+        root: path.join(__dirname, 'static'),
+        'Content-Type' : 'application/json'
+      };
+      res.sendFile('output.json', options);
+    }
+  });
+});
 
 /* Scholarship data endpoint */
-// Sorting??
+// Sorting -- that's the fronend's problem
+
+app.get('/scholarship_data', (req, res) => {
+  let options = {
+    root: path.join(__dirname, 'static'),
+    'Content-Type' : 'application/json'
+  };
+  res.sendFile('sch_data.json', options);
+});
 
 /* Page definitions */
 
