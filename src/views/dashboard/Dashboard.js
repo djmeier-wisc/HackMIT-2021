@@ -61,7 +61,6 @@ const Dashboard = () => {
 
   return (
     <>
-      <WidgetsDropdown />
       <CCard className="mb-4">
         <CCardBody>
           <CRow>
