@@ -1,6 +1,25 @@
 import React from 'react';
 import './nav.css';
-export const Nav = ({ setState }) => {
+export const Nav = ({setState, loggedIn, user, setLoggedIn}) => {
+    let logout = () => {
+        console.log(user);
+        fetch('/logout', { method: 'GET'})
+        setLoggedIn(false);
+    };
+    let loginPane;
+    if (!loggedIn) {
+        loginPane = (
+            <li className="nav-item">
+                <a className="nav-link" href="#Login" onClick={() => { setState(4) }}>Login</a>
+            </li>
+        );
+    } else {
+        loginPane = (
+            <li className="nav-item">
+                <a className="nav-link" href="#Login" onClick={() => { logout(false) }}>{user}: Logout</a>
+            </li>
+        );
+    }
     return (
         <div className="px-3">
             <nav className='navbar navbar-expand-lg navbar-light bg-light'>
@@ -19,9 +38,7 @@ export const Nav = ({ setState }) => {
                         <li className="nav-item">
                             <a className="nav-link" href="#About" onClick={() => { setState(3) }}>About</a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#Login" onClick={() => { setState(4) }}>Login</a>
-                        </li>
+                        {loginPane}
                     </ul>
                 </div>
             </nav>

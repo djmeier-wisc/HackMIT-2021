@@ -56,13 +56,24 @@ app.post('/login', (req, res) => {
         if (user) {
             req.session.regenerate(function() {
                 req.session.user = user;
-                req.session.success = "Authentication successful";
-                res.redirect('/financing');
+                res.json({
+                  user : user 
+                });
             });
         } else {
-            req.session.error = "Authentication failed, check your username and password"
-            res.redirect('/login');
+            res.status(404);
+            res.json({
+              error: "Authentication failed, check your username and password"
+            });
+            //res.redirect('/login');
         }
+    });
+});
+
+app.get('/amiloggedin', (req, res) => {
+    res.json({
+      loggedin : Boolean(req.session.user),
+      user: req.session.user
     });
 });
 

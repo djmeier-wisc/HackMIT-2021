@@ -10,6 +10,7 @@ let userauth_data = null;
 const USERAUTH_BACKINGSTORE = "auth.json";
 
 let userauth = function(user, pw, fn){
+    console.log(`userauth: ${user} ${pw}`);
     if (!userauth_data) {
         userauth_data = JSON.parse(fs.readFileSync(USERAUTH_BACKINGSTORE, {encoding: 'utf8'}));
     }
