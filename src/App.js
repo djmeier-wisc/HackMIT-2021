@@ -13,10 +13,10 @@ function App() {
       <header className="App-header">
 
         <Nav  setState = {setstate}/>
-        {state==0 && <Home/>}
-        {state==1 && <Finance/>}
-        {state==2 && <Scholarships/>}
-        {state==3 && <About/>}
+        {state===0 && <Home/>}
+        {state===1 && <Finance/>}
+        {state===2 && <Scholarships/>}
+        {state===3 && <About/>}
       </header>
     </div>
   );
