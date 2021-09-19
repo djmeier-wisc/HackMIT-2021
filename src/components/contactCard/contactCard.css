@@ -1,0 +1,18 @@
+.img-crop {
+    height:150px; 
+    border-radius: 50%; border: 5px solid black;
+  }
+
+.contact-card {
+    transition: background-color .5s ease-out;
+    background-color: white;
+}
+.contact-card:hover {
+    background-image: none;
+    background-color: rgb(126, 126, 126);
+    color: white !important;
+}
+.container {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
