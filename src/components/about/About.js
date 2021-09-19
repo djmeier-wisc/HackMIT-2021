@@ -27,7 +27,7 @@ function About () {
             <div className="container">
                 <div className="row">
                     <div className="col-md-3">
-                        <ContactCard image={nicImg} name='Nic Hodlofski' description="" />
+                        <ContactCard image={nicImg} name='Nic Hodlofski' description="Computer Science Senior at UW, aspiring embedded systems engineer, and occasional maker of things. In my free time I enjoy video games and DnD with friends." />
                     </div>
                     <div className="col-md-3">
                         <ContactCard image={harryImg} name='Harry Wang' description='I am Harry! I am currently a Junior at UW-Madison, studying Computer Science and Mathematics. I am interested in back-end programming. I like reading fiction during my free time, and sometimes I would go for a run. And when I am not doing these things, I am usually sleeping….' />
