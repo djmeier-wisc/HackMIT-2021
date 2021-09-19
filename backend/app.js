@@ -35,8 +35,9 @@ app.post('/register', (req, res) => {
     let error = false;
     db.useradd(req.body.username, req.body.password, (err) => {
         if (err) {
-          req.session.error = "User already exists";
-          res.redirect('/register');
+          res.json({
+            error: "User already exists"
+          });
           error = true;
         }
     });
@@ -46,8 +47,9 @@ app.post('/register', (req, res) => {
     // Create a session for the new user
     req.session.regenerate(function() {
         req.session.user = req.body.username;
-        req.session.success = "User added";
-        res.redirect('/financing');
+        res.json({
+          user : req.body.username 
+        });
     });
 });
 

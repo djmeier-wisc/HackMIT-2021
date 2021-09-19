@@ -6,6 +6,7 @@ import Finance from './components/financing/Financing'
 import Scholarships from './components/scholarships/Scholarships'
 import Home from './components/home/Home'
 import Login from './components/login/Login'
+import Register from './components/Register'
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -45,6 +46,7 @@ class App extends React.Component {
           {this.state.navPane===2 && <Scholarships/>}
           {this.state.navPane===3 && <About/>}
           {this.state.navPane===4 && <Login onChange={this.setLoggedIn}/>}
+          {this.state.navPane===5 && <Register onChange={this.setLoggedIn}/>}
         </header>
       </div>
     );

@@ -7,10 +7,16 @@ export const Nav = ({setState, loggedIn, user, setLoggedIn}) => {
         setLoggedIn(false);
     };
     let loginPane;
+    let registerPane;
     if (!loggedIn) {
         loginPane = (
             <li className="nav-item">
                 <a className="nav-link" href="#Login" onClick={() => { setState(4) }}>Login</a>
+            </li>
+        );
+        registerPane = (
+            <li className="nav-item">
+                <a className="nav-link" href="#Register" onClick={() => { setState(5) }}>Register</a>
             </li>
         );
     } else {
@@ -39,6 +45,7 @@ export const Nav = ({setState, loggedIn, user, setLoggedIn}) => {
                             <a className="nav-link" href="#About" onClick={() => { setState(3) }}>About</a>
                         </li>
                         {loginPane}
+                        {registerPane}
                     </ul>
                 </div>
             </nav>
