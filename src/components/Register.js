@@ -1,5 +1,5 @@
 import React from 'react';
-class Login extends React.Component {
+class Register extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -18,7 +18,7 @@ class Login extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        fetch('/login', {
+        fetch('/register', {
             method : 'POST',
             cache : 'no-cache',
             contentType : 'application/x-www-form-urlencoded;charset=UTF-8',
@@ -69,7 +69,7 @@ class Login extends React.Component {
         return (
             <div className="container">
                 <form id="loginForm" onSubmit={this.handleSubmit}>
-                    <h1>Login Here</h1>
+                    <h1>Register for an Account:</h1>
                     <br />
                     <span>Username</span>
                     <input name="username" onChange={this.handleChange}></input>
@@ -85,4 +85,4 @@ class Login extends React.Component {
     }
 }
 
-export default Login;
+export default Register;
