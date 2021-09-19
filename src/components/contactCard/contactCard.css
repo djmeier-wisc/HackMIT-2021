@@ -6,13 +6,26 @@
 .contact-card {
     transition: background-color .5s ease-out;
     background-color: white;
+    min-height: 450px;
+    text-overflow: ellipsis;
+    background-image: none;
 }
 .contact-card:hover {
     background-image: none;
     background-color: rgb(126, 126, 126);
     color: white !important;
+    text-overflow: ellipsis;
+    
 }
 .container {
     padding-right: 0px !important;
     padding-left: 0px !important;
+    margin-bottom: 20px;
+    
 }
+
+.overflow-ellipsis {
+    text-overflow: ellipsis;
+    max-height: 100px;
+    overflow:hidden;
+  }

@@ -5,7 +5,7 @@ class ContactCard extends React.Component {
         return (
         <div className="container border border-dark">
             <div className="text-center p-3 contact-card">
-                <img className="img-rounded img-crop" src={"./" + this.props.image} />
+                <img className="img-rounded img-crop" src={"./" + this.props.image} alt={"" + this.props.name + ""} />
                 <br />
                 <h3>{this.props.name}</h3>
                 <br />
