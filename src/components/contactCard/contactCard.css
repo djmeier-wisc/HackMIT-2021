@@ -6,7 +6,7 @@
 .contact-card {
     transition: background-color .5s ease-out;
     background-color: white;
-    max-height: 500px;
+    min-height: 450px;
     text-overflow: ellipsis;
     background-image: none;
 }
@@ -27,4 +27,5 @@
 .overflow-ellipsis {
     text-overflow: ellipsis;
     max-height: 100px;
+    overflow:hidden;
   }
