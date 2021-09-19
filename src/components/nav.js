@@ -27,6 +27,7 @@ export const Nav = ({setState, loggedIn, user, setLoggedIn}) => {
         );
     }
     return (
+
         <div className="px-3">
             <nav className='navbar navbar-expand-lg navbar-light bg-light'>
                 <a className="navbar-brand" href="#Home" onClick={() => { setState(0) }}>Brokers</a>
@@ -48,5 +49,6 @@ export const Nav = ({setState, loggedIn, user, setLoggedIn}) => {
                 </div>
             </nav>
         </div>
+
     )
 }
