@@ -35,9 +35,7 @@ export const Nav = ({setState, loggedIn, user, setLoggedIn}) => {
                 </button>
                 <div className="collapse navbar-collapse px-4" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
-                        <li className="nav-item active">
-                            <a className="nav-link" href="#Finance" onClick={() => { setState(1) }}>Finance</a>
-                        </li>
+                        
                         <li className="nav-item">
                             <a className="nav-link" href="#Scholarship" onClick={() => { setState(2) }}>Scholarship</a>
                         </li>

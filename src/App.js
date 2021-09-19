@@ -42,7 +42,7 @@ class App extends React.Component {
             user={this.state.username}
             setLoggedIn={this.setLoggedIn}/>
           {this.state.navPane===0 && <Home/>}
-          {this.state.navPane===1 && <Finance/>}
+          
           {this.state.navPane===2 && <Scholarships/>}
           {this.state.navPane===3 && <About/>}
           {this.state.navPane===4 && <Login onChange={this.setLoggedIn}/>}
