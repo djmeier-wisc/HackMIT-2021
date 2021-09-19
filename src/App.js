@@ -5,6 +5,7 @@ import About from './components/about/About'
 import Finance from './components/financing/Financing'
 import Scholarships from './components/scholarships/Scholarships'
 import Home from './components/home/Home'
+import Login from './components/login/Login'
 function App() {
 
   const [state, setstate] = useState(0);
@@ -17,6 +18,7 @@ function App() {
         {state===1 && <Finance/>}
         {state===2 && <Scholarships/>}
         {state===3 && <About/>}
+        {state===4 && <Login/>}
       </header>
     </div>
   );
