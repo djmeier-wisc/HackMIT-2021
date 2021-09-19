@@ -4,6 +4,7 @@ class QuotetutorialItem(scrapy.Item):
     title = scrapy.Field()
     deadline = scrapy.Field()
     description = scrapy.Field()
+    link = scrapy.Field()
 class QuotesSpider(scrapy.Spider):
     name = "scholar"
     start_urls = [
@@ -24,9 +25,11 @@ class QuotesSpider(scrapy.Spider):
             title = response.css('.scholarship h3::text')[count].extract()
             deadline = response.css('strong::text')[count].extract()
             description = response.css('.info p::text')[count].extract()
+            link = response.css('.text-btn::attr(href)')[count].extract()
             count+=1
         #fo quote in response.css('div.quote'):
             items['title'] = title
             items['deadline'] = deadline 
             items['description'] = description
+            items['link'] = link
             yield items
