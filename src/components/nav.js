@@ -8,6 +8,7 @@ export const Nav = ({setState}) => {
             <span className = 'nav navbar-brand mb-0 h1 mx-auto'><li><a href="#Scholarship" onClick={()=>{setState(2)}}>Scholarship</a></li></span>
             <span className = 'nav navbar-brand mb-0 h1 mx-auto'><li><a href="#About" onClick={()=>{setState(3)}}>About us</a></li></span>
             <span className = 'nav navbar-brand mb-0 h1 mx-auto'><li><a href="#Login" onClick={()=>{setState(4)}}>Login</a></li></span>
+            <span className = 'nav navbar-brand mb-0 h1 mx-auto'><li>Brokers</li></span>
         </nav>
     )
 }
